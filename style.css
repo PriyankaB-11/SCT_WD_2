@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2346e1 0%, #7517d2 100%);
+}
+
+
+.calculator {
+    width: 100%;
+    max-width: 360px; 
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.display {
+    width: 100%;
+    min-height: 104px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    
+    text-align: right;
+    font-size: 3.5rem; 
+    font-weight: 500;
+    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+
+.btn {
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    
+    font-size: 1.75rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-number {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1a1a1a;
+}
+
+.btn-operator {
+    background-color: #764ba2;
+    color: white;
+}
+
+.btn-action-clear {
+    background-color: #ef4444; /* Red */
+    color: white;
+    grid-column: span 2;
+    aspect-ratio: auto;
+}
+
+.btn-action-del {
+    background-color: #f97316; /* Orange */
+    color: white;
+}
+
+.btn-action-eval {
+    background-color: #22c55e; /* Green */
+    color: white;
+}
+
+.btn-zero {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1a1a1a;
+    grid-column: span 2;
+    aspect-ratio: auto;
+}
+
